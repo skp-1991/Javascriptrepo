@@ -10,12 +10,12 @@
 // object
 
 
-let name = "sushil"
+let fullName = "sushil"
 let age = 31
 let ageOne = Number(31)
 let logIn = false
 
-console.log(typeof name)
+console.log(typeof fullName)
 console.log(typeof age)
 console.log(typeof ageOne)
 console.log(typeof logIn)
