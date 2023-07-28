@@ -1,4 +1,4 @@
-console.log("==============")
+console.log("========== Conversaion ==============")
 let score = 55
 console.log(typeof score)
 console.log(typeof(score))
@@ -38,3 +38,31 @@ console.log(nnValueTwo)
 console.log("============== ")
 let nValueThree = 33
 let nnValueThree
+
+
+
+console.log("========== Math Operations ==============")
+
+let opValue = 3
+let opValueOne = 4
+
+console.log(opValue + opValueOne)
+console.log(opValue - opValueOne)
+console.log(opValue / opValueOne)
+console.log(opValue * opValueOne)
+console.log(opValue % opValueOne)
+
+
+console.log("1" + 4)
+console.log(1 + "4")
+
+//Wrong Way
+console.log(1 + 1 + "4")
+console.log("1" + 1 + 4)
+
+//Write Way
+console.log("1" + (1 + 4))
+
+
+//Prefixed ++x and postfixed x++
+
