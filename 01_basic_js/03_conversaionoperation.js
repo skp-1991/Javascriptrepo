@@ -23,7 +23,18 @@ let temprature = Number(null)
 console.log("If convert Null to number, then this will give the 0 value, this can be create the issue in if we are geting the temprature")
 console.log(temprature)
 
-console.log("==============")
-
-
-
+console.log("false ============== 0")
+let nValue = 0
+let nnValue = Boolean(nValue)
+console.log(nnValue)
+console.log("ture ============== 1")
+let nValueOne = 1
+let nnValueOne = Boolean(nValueOne)
+console.log(nnValueOne)
+console.log("============== If have the value then this will show true and If string is empty then show false ")
+let nValueTwo = "sushil"
+let nnValueTwo = Boolean(nValueTwo)
+console.log(nnValueTwo)
+console.log("============== ")
+let nValueThree = 33
+let nnValueThree
