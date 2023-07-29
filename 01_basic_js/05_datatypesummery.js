@@ -1,4 +1,4 @@
-// premitive data type
+// premitive data type // this use stack memory for work
 /*
 7 categories
 String
@@ -48,7 +48,7 @@ const bigValue = 9999999999999999999999999999999999999n
 console.log(typeof bigValue)
 
 
-// Reference Type (Non premitive data type)
+// Reference Type (Non premitive data type)  // This use heap memory
 
 /*
 Array
