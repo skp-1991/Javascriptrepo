@@ -71,7 +71,20 @@ let objValue = {
         console.log(objValue.employeeId)
     }
 }
+console.log(typeof objValue)
+console.log(objValue.employeeCounter());
 console.log(typeof objValue.employeeCounter);
 console.log(typeof objValue.employeeId);
 console.log(typeof objValue.employeeName);
 console.log(typeof objValue.employeeLogin);
+
+
+console.log("===========================")
+//function
+
+
+let funValue = function (){ }
+function funValueOne(){ }
+funValueOne();   // this is for call the function
+
+console.log(typeof funValue)
