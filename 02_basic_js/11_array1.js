@@ -1,8 +1,37 @@
 const arrValue = [0,1,2,3,4,5]
 
-console.log(arrValue)
-console.log(arrValue[2])
-console.log(arrValue.length)
+// console.log(arrValue)
+// console.log(arrValue[2])
+// console.log(arrValue.length)
+
+// arrValue.push(6)  // add the value in end
+// arrValue.push(7)  // add the value in end
+// arrValue.pop()  // remove the value form the end.
+// arrValue.unshift(9)  // add the value in Start
+// arrValue.unshift(10)  // add the value in Start
+// arrValue.shift()  // remove the value in Start
+// console.log(arrValue)
+// console.log(arrValue.includes(4))
+// console.log(arrValue.indexOf(4))
+
+// const newArray = arrValue.join()   // this convert the value in string
+// console.log(arrValue)
+// console.log(newArray)
+
+
+
+// console.log("======== slice & splice ============")
+
+// const newArrayOne = arrValue.slice(1,3)  // This will create the a copy of the array then orignal array will not reflect by new one and this will only show the starting value to before end value. this will not show end value in array
+// console.log(newArrayOne)
+// console.log(arrValue)
+
+// const newArrayTwo = arrValue.splice(1,3) // this will create a new array and form the orignal array and changed the orignal array and this will show value to starting point(1) value to end point value (3) 
+// console.log(newArrayTwo)
+// console.log(arrValue)
+
+
+
 
 
 // shallow property - if you will change the value then array will also change and Deep copy - this create a copy of the array this do not change in the orignal array.
@@ -47,3 +76,20 @@ console.log(arr1.map((x) => [x * 2]));
 console.log("======== flatMap() - this work with call back ============")
 const arr2 = [1, 2, 3, 4];
 console.log(arr2.flatMap((x) => [x * 2]));
+
+console.log("======== forEach() ============")
+const arr3 = arr2.forEach((element) => {
+    console.log(element)
+})
+
+console.log("======== indexOf() ============")
+console.log(arrValue.indexOf(3))
+
+console.log("======== lastIndexOf() ============")
+console.log(arrValueOne.lastIndexOf(10))
+
+
+console.log("======== map() ============")
+arrValueOne.map(element => {
+    console.log(element)
+})
