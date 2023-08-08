@@ -31,3 +31,19 @@ console.log("======== filter ============")
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 const result = words.filter((word) => word.length < 6);
 console.log(result);
+
+console.log("======== flat() ============")
+// we can use number value in flat for marge the arr with child array and we can also use infinity for marge the all arrays
+const flArr = [0, 1, 2, [3, 4, 5]]
+console.log(flArr.flat())
+const flArrOne = [0, 1, 2, [3, 4, 5, [6, 7, 8, [9, 10, 11]]]]
+console.log(flArrOne.flat(2))
+console.log(flArrOne.flat(Infinity))  
+
+// we can define the call back function
+const arr1 = [1, 2, 3, 4];
+console.log(arr1.map((x) => [x * 2]));
+
+console.log("======== flatMap() - this work with call back ============")
+const arr2 = [1, 2, 3, 4];
+console.log(arr2.flatMap((x) => [x * 2]));
