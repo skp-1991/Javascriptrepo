@@ -1,4 +1,7 @@
-// singleton 
+// singleton object
+const objValueOne = new Object()
+
+
 // Object.create
 
 // object literals
