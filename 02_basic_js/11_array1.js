@@ -5,6 +5,9 @@ console.log(arrValue)
 console.log(arrValue[2])
 console.log(arrValue.length)
 
+arrValue.push(arrValue1)  // issue for puch the value in one array by other
+console.log(arrValue)
+
 arrValue.push(6)  // add the value in end
 arrValue.push(7)  // add the value in end
 arrValue.pop()  // remove the value form the end.
