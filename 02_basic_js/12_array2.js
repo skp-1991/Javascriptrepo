@@ -1,17 +1,17 @@
-// function of array
+// // function of array
 
-const arrValue = [0,1,2,3,4,5]
-const arrValue1 = [6,7,8,9,10,11]
+// const arrValue = [0,1,2,3,4,5]
+// const arrValue1 = [6,7,8,9,10,11]
 
-// shallow property - if you will change the value then array will also change and Deep copy - this create a copy of the array this do not change in the orignal array.
+// // shallow property - if you will change the value then array will also change and Deep copy - this create a copy of the array this do not change in the orignal array.
 
 
-const arrValueOne = [4, 6, 8, 10, 60]
-const arrValueTwo = [14, 62, 83, 15, 10]
+// const arrValueOne = [4, 6, 8, 10, 60]
+// const arrValueTwo = [14, 62, 83, 15, 10]
 
-console.log("======== at ============")
-let atValue = arrValueOne.at(2)
-console.log(atValue)
+// console.log("======== at ============")
+// let atValue = arrValueOne.at(2)
+// console.log(atValue)
 
 
 // console.log("======== concat ============")
@@ -114,3 +114,21 @@ console.log(atValue)
 // console.log("======== sort ============")
 // // this align the value as per numeric or alphabaticaly
 // console.log(soValue.sort())
+
+
+console.log("======== from ============")
+
+console.log(Array.from("Sushil"))
+console.log(Array.from({
+    name : "Sushil",
+    Age : 31
+}))  // We need to tell create a value by key or value
+
+console.log("======== of - This create array by the define variable ============")
+
+let value1 = 100
+let value2 = 300
+let value3 = 400
+
+console.log(Array.of(value1,value2, value3))
+
