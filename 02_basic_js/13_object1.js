@@ -37,3 +37,4 @@ objValue.life = function(){
 
 console.log(objValue.greetings())
 console.log(objValue.life())
+
