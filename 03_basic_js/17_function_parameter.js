@@ -50,3 +50,15 @@ console.log(userlog);
 
 // second user for parameter
 
+
+function loginUserMessage(userName){  // function loginUserMessage(userName = "Sushil"){ We give the defult value for userName if we will not define the value then this will show
+    if(userName === undefined) {  // we can also do this if(!userName) {
+        return "Please enter the User Name"
+    }else {
+        return `${userName} just logined`
+    }
+}
+
+let userlogedMessage = loginUserMessage()
+
+console.log(userlogedMessage);
