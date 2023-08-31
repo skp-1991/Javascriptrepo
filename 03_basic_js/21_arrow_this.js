@@ -45,6 +45,19 @@ const objOne = {
 // emplicit 
 // no need to add return in this
 // const oneValue = (num1, num2) => num1 + num2
-const oneValue = (num1, num2) => ( num1 + num2 )
+// const oneValue = (num1, num2) => ( num1 + num2 )
+const oneValue = (num1, num2) => ({username : "Sushil"})
 
 console.log(oneValue(4,3));
+
+const myArray = [2,4,6,2,8]
+//currect way one
+// myArray.forEach(function(){
+
+// })
+
+//currect way two arrow function = one line function in arrow function
+myArray.forEach((num1,num2) => (num1 + num2))
+
+//currect way third arrow function
+// myArray.forEach(() => {})
