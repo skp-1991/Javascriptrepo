@@ -53,3 +53,6 @@ if(temprature <= 50){
 }else{
     console.log("Temprature greater then 50")
 }
+
+
+const balance = 1000
