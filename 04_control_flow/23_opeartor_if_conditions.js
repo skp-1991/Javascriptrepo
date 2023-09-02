@@ -97,7 +97,7 @@ val1 = null ?? undefined ?? 40 ?? 50
 console.log(val1);
 
 
-// Terniary Operator
+// Terniary Operator - single question mark "?"
 
 const iceCream = 10
 
