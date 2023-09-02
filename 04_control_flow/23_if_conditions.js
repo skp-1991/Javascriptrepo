@@ -48,11 +48,39 @@
 
 const temprature = 50
 
-if(temprature <= 50){
-    console.log("Temprature less then 50");
-}else{
-    console.log("Temprature greater then 50")
+// if(temprature <= 50){
+//     console.log("Temprature less then 50");
+// }else{
+//     console.log("Temprature greater then 50")
+// }
+
+
+const balance = 400
+// implicet scope in one line
+// if(balance > 500) console.log("Blance less then 500"), console.log("Test2");
+
+// if(balance < 400) console.log("Balance less then 400")
+// else if(balance < 600) console.log("Balance less then 600")
+// else if(balance < 800) console.log("Balance less then 800")
+// else if(balance < 1000) console.log("Balance less then 1000")
+// else console.log("Balance less then 1200")
+
+
+
+
+//  && , || 
+
+
+const userLoggedIn = true
+const creditCard = true
+
+if(userLoggedIn && creditCard && 2==2) {
+    console.log("User buy course")
 }
 
+const userLoggedInGoogle = true
+const userLoggedInEmail = true
 
-const balance = 1000
+if(userLoggedInGoogle || userLoggedInEmail) {
+    console.log("user login by google or email");
+}
