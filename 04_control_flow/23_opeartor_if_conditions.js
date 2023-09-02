@@ -84,3 +84,21 @@ const userLoggedInEmail = true
 if(userLoggedInGoogle || userLoggedInEmail) {
     console.log("user login by google or email");
 }
+
+
+// Nullish Coalescing Operator (??) :: We will watch in the only null and undefine
+
+let val1
+val1 = 5 ?? 10
+val1 = null ?? 20
+val1 = undefined ?? 30
+val1 = null ?? undefined ?? 40 ?? 50
+
+console.log(val1);
+
+
+// Terniary Operator
+
+const iceCream = 10
+
+iceCream <= 8 ? console.log("Less then 8"):console.log("more then 8");;
