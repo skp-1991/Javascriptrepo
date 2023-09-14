@@ -44,3 +44,6 @@ const ourObj = {
     'email' : 'sushil@sushil.com'
 }
 
+// for (const [key,value] of ourObj){
+//     //console.log(`${key} - ${value}`);
+// }
