@@ -52,3 +52,20 @@ let myAr = [
 myAr.forEach((item,index,fularr)=> {
     console.log(`${index} - ${item.language}  - ${item.fileName}`);
 })
+
+
+
+// If we will take the forEach in a variable the forEach do not return any thing and give undefine.
+
+// const coding = ['JS','HTML','CSS','Photoshop']
+
+// coding.forEach(items => {
+//     console.log(items)
+// });
+
+// const value = coding.forEach((item)=>{
+//     // console.log(`${item}`);
+//     return item
+// })
+
+// console.log(value);
