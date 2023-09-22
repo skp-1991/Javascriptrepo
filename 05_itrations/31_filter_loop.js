@@ -26,9 +26,20 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
 ];
 
-// let itrBooks = books.filter((tag) => tag.publish < 2000 )
-//   let itrBooks = books.filter((tag) => tag.genre === "History" )
-// let itrBooks = books.filter((tag) => tag.edition < 2000 )
-let itrBooks = books.filter((tag) => tag.title === "Book Six" )
+let itrBooks = books.filter((tag) => tag.publish < 2000 )
+itrBooks = books.filter((tag) => tag.genre === "History" )
+itrBooks = books.filter((tag) => tag.edition < 2000 )
+itrBooks = books.filter((tag) => tag.title === "Book Six" )
+
+// when use scoop then use return other wise this will show blank array
+itrBooks = books.filter((tag) => {
+    return tag.title === "Book Six"
+})
+
+
+itrBooks = books.filter((tag) => {
+    return tag.publish < 2000  && tag.edition < 2000
+})
+
 
 console.log(itrBooks);
