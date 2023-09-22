@@ -9,11 +9,19 @@ numbs = numbers.map((nums) => {
 numbs = numbers.map((nums) => {
     return nums + 30
 })
-//console.log(numbs);
+
+// Chaining
+
+numbs1 = numbers.filter((fil)=> fil > 5).map((nums) => nums + 2)
+numbs2 = numbers.filter((fil)=> fil > 5).map((nums) => nums + 2).map((nums)=> nums + 5)
+numbs = numbers.filter((fil)=> fil > 5).map((nums) => nums + 2).map((nums)=> nums + 5).filter((nums)=> nums >= 15 )
+console.log(numbs1);
+console.log(numbs2);
+console.log(numbs);
 
 
-// by foreach
-numbers.forEach((nu) => {
-    console.log(nu + 2);
-})
+// // by foreach
+// numbers.forEach((nu) => {
+//     console.log(nu + 2);
+// })
 
