@@ -5,4 +5,15 @@ let numbs = numbers.map((nums) => nums + 2)
 numbs = numbers.map((nums) => {
     return nums + 2
 })
-console.log(numbs);
+
+numbs = numbers.map((nums) => {
+    return nums + 30
+})
+//console.log(numbs);
+
+
+// by foreach
+numbers.forEach((nu) => {
+    console.log(nu + 2);
+})
+
