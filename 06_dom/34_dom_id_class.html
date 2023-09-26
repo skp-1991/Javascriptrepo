@@ -24,10 +24,10 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis aenean et tortor at risus viverra. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Id ornare arcu odio ut sem. Id velit ut tortor pretium viverra suspendisse potenti nullam. Libero nunc consequat interdum varius sit amet mattis.</p>
         <input type="text" class="pass" placeholder="Name" required />
         <ul>
-            <li>Monday</li>
-            <li>Tusday</li>
-            <li>Wedesday</li>
-            <li>Thusday</li>
+            <li class="item">Monday</li>
+            <li class="item">Tusday</li>
+            <li class="item">Wedesday</li>
+            <li class="item">Thusday</li>
         </ul>
     </div>
     <script>
@@ -45,10 +45,14 @@
         console.log(incon)
 
         // Class Name
-
-        let hheading = document.getElementsByClassName('heading')
-        let hhtext = hheading.innerHTML;
-        console.log(hhtext)
+        let hheading = document.getElementsByClassName('item')
+        console.log(hheading)
+        // for this we need to convert this in array then we can use any loop for print this.
+        let arr = Array.from(hheading)
+        console.log(arr)
+        arr.forEach((ar)=> {
+            ar.style.color = 'red'
+        })
     </script>
 </body>
 </html>

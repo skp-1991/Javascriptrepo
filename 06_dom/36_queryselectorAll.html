@@ -41,27 +41,21 @@
        // document.querySelector
        // document.querySelectorAll
 
-       // this only will provide the first value which found
-       let qsel = document.querySelector('h1')
-       console.log(qsel)
+       const ullist = document.querySelectorAll('li')
+       console.log(ullist)
 
-       let qselone = document.querySelector('.heading')
-       qselone = document.querySelector('#dom')
-       qselone = document.querySelector('input[type=text]')
-       qselone = document.querySelector('.pass')
-       qselone = document.querySelector('ul')
-       qselone = document.querySelector('ul > li')
-       qselone = document.querySelector('li:first-child')
-       qselone = document.querySelector('li:last-child')
+       // We will get the nodelist. Nodelist and HTMLcollection is not array
 
-       console.log(qselone);
-       
-       let qseltwo = document.querySelector('ul')
-       let qseltwoone = qseltwo.querySelector('li')
-       // qseltwoone = qseltwo.querySelector('h1') // this is the wrong way because now we are in ul so only innervalue will visible.
-       qseltwoone.style.color = 'green'
-       console.log(qseltwoone)
-       console.log(qseltwoone.innerText)
+       ullist.forEach((list)=> {
+        list.style.color = 'blue'
+       })
+       ullist[0].style.color = 'green'
+
+
+    //    if you want to convert the nodelist in array then you need to do this. But nodelist have forEach for print the value.
+
+    let arr = Array.from(ullist)
+    console.log(arr)
        
     </script>
 </body>
