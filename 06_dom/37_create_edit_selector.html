@@ -20,8 +20,16 @@
     </div>
     
     <script>
+        let parent = document.querySelector('.parent')
+        console.log(parent)
+        let child = parent.children
+        let childOne = parent.children[0]
+        console.log(child)
+        console.log(childOne)
 
-        
+        let create = document.createElement('div')
+        let atrib = create.setAttribute('class','sushil')
+        console.log(create)
     </script>
 
 </body>
