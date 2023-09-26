@@ -17,12 +17,26 @@
         .full-content-box h1,.full-content-box p{
             color:#fff;
         }
+        .do{display: none;}
     </style>
 </head>
 <body>
     <div class="full-content-box">
-        <h1 id="dom">DOM Learing</h1>
+        <h1 id="dom" class="heading">DOM Learing <span class="do">Best way</span></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis aenean et tortor at risus viverra. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Id ornare arcu odio ut sem. Id velit ut tortor pretium viverra suspendisse potenti nullam. Libero nunc consequat interdum varius sit amet mattis.</p>
     </div>
+    <script>
+        let heading = document.getElementById('dom')
+        heading.className;
+        heading.style.color = 'red'
+        heading.style.backgroundColor = '#fff'
+        console.log(heading)
+        let inHT = heading.innerHTML;   // This show all type of the value inside div HTML tag and inline css
+        console.log(inHT)
+        let inTe = heading.innerText; // This only show the visible text content on screen.
+        console.log(inTe)
+        let incon = heading.textContent; // This show the visible text content on screen and also hidden text which hide by css.
+        console.log(incon)
+    </script>
 </body>
 </html>
