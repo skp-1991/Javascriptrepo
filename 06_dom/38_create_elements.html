@@ -9,19 +9,35 @@
             background-color: #000;
             margin:0px;
         }
-        .parent{color:#fff;padding:30px;}
+        .con{height:500px;width:500px;background-color: #fff;}
     </style>
 </head>
 <body>
-    
-    
+    <div id="con">
+
+    </div>
     
 
 </body>
 <script>
     console.log('------------------------')
+    let main = document.getElementById('con')
     let create = document.createElement('div')
-    let atrib = create.setAttribute('class','sushil')
-    //console.log(create)
+    create.className = 'sushil'
+    create.id = 'main'
+    create.tabIndex = Math.random() * 10 + 1
+    
+    create.title = Math.round(Math.random() * 10 + 1)
+    create.setAttribute('main','row')
+    create.style.backgroundColor = 'green'
+    create.style.color = '#fff'
+    create.style.padding = '40px'
+    // create.innerText = "hello world!"
+
+    let text = document.createTextNode('Hello World for')
+    create.appendChild(text)
+    
+    console.log(create)
+    main.appendChild(create)
 </script>
 </html>
