@@ -34,29 +34,30 @@
             <li>Thusday</li>
         </ul>
     </div>
-    <script>
-       // four type of query selector is avalible
-       // document.getElementById
-       // document.getElementsByClassName
-       // document.querySelector
-       // document.querySelectorAll
-
-       const ullist = document.querySelectorAll('li')
-       console.log(ullist)
-
-       // We will get the nodelist. Nodelist and HTMLcollection is not array
-
-       ullist.forEach((list)=> {
-        list.style.color = 'blue'
-       })
-       ullist[0].style.color = 'green'
-
-
-    //    if you want to convert the nodelist in array then you need to do this. But nodelist have forEach for print the value.
-
-    let arr = Array.from(ullist)
-    console.log(arr)
-       
-    </script>
+    
 </body>
+<script>
+    // four type of query selector is avalible
+    // document.getElementById
+    // document.getElementsByClassName
+    // document.querySelector
+    // document.querySelectorAll
+
+    const ullist = document.querySelectorAll('li')
+    console.log(ullist)
+
+    // We will get the nodelist. Nodelist and HTMLcollection is not array
+
+    ullist.forEach((list)=> {
+     list.style.color = 'blue'
+    })
+    ullist[0].style.color = 'green'
+
+
+ //    if you want to convert the nodelist in array then you need to do this. But nodelist have forEach for print the value.
+
+ let arr = Array.from(ullist)
+ console.log(arr)
+    
+ </script>
 </html>

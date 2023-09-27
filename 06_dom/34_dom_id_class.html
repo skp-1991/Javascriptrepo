@@ -30,29 +30,30 @@
             <li class="item">Thusday</li>
         </ul>
     </div>
-    <script>
-        let heading = document.getElementById('dom')
-        console.log(heading)
-        heading.className;
-        heading.style.color = 'red'
-        heading.style.backgroundColor = '#fff'
-        
-        let inHT = heading.innerHTML; // This show all type of the value inside div HTML tag and inline css
-        console.log(inHT)
-        let inTe = heading.innerText; // This only show the visible text content on screen.
-        console.log(inTe)
-        let incon = heading.textContent; // This show the visible text content on screen and also hidden text which hide by css.
-        console.log(incon)
-
-        // Class Name
-        let hheading = document.getElementsByClassName('item')
-        console.log(hheading)
-        // for this we need to convert this in array then we can use any loop for print this.
-        let arr = Array.from(hheading)
-        console.log(arr)
-        arr.forEach((ar)=> {
-            ar.style.color = 'red'
-        })
-    </script>
+    
 </body>
+<script>
+    let heading = document.getElementById('dom')
+    console.log(heading)
+    heading.className;
+    heading.style.color = 'red'
+    heading.style.backgroundColor = '#fff'
+    
+    let inHT = heading.innerHTML; // This show all type of the value inside div HTML tag and inline css
+    console.log(inHT)
+    let inTe = heading.innerText; // This only show the visible text content on screen.
+    console.log(inTe)
+    let incon = heading.textContent; // This show the visible text content on screen and also hidden text which hide by css.
+    console.log(incon)
+
+    // Class Name
+    let hheading = document.getElementsByClassName('item')
+    console.log(hheading)
+    // for this we need to convert this in array then we can use any loop for print this.
+    let arr = Array.from(hheading)
+    console.log(arr)
+    arr.forEach((ar)=> {
+        ar.style.color = 'red'
+    })
+</script>
 </html>

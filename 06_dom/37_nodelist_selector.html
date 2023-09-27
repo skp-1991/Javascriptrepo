@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+    <style>
+        body{
+            background-color: #000;
+            margin:0px;
+        }
+        .parent{color:#fff;padding:30px;}
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">First</div>
+        <div class="child">Second</div>
+        <div class="child">Third</div>
+        <div class="child">Fourth</div>
+    </div>
+    
+    
+
+</body>
+<script>
+    let parent = document.querySelector('.parent')
+    // console.log(parent)
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+
+    // Nodes
+    console.log(parent.childNodes)
+
+
+    console.log('------------------------')
+    let child = parent.children
+    let childOne = parent.children[0]
+    // console.log(child)
+    // console.log(childOne)
+
+    // for (let index = 0; index < child.length; index++) {
+    //     console.log(child[index].innerHTML)
+    // }
+
+    
+    console.log('------------------------')
+
+    let dayOne = document.querySelector('.child')
+    // console.log(dayOne)
+    // console.log(dayOne.parentElement)
+    // console.log(dayOne.nextElementSibling)
+    // console.log(dayOne.previousElementSibling)
+
+</script>
+</html>
