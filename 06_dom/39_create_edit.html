@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+    <style>
+        body{
+            background-color: #000;
+            margin:0px;
+        }
+        .content-list{color:#fff;}
+    </style>
+</head>
+<body>
+    <div class="content-list">
+        <ul class="list-i">
+            <li>Javascript</li>
+        </ul>
+    </div>
+    <div class="form-box">
+        <input type="text" name="text" id="addvalue" value="dfvfx">
+        <input type="submit" value="Add Value" id="submitValue">
+        
+        <input type="submit" value="Delete" id="deleteValue">
+    </div>
+    
+
+</body>
+<script>
+    const submit = document.querySelector('#submitValue')
+    submit.addEventListener("click", ()=>{
+    const addValue = document.getElementById('addvalue').value;
+        const list = document.querySelector('.list-i')
+        let li = document.createElement('li')
+        let liText = document.createTextNode(addValue)
+        li.appendChild(liText)
+        console.log(li)
+        list.appendChild(li)
+
+    })
+    const deleted = document.querySelector('#deleteValue')
+
+    deleted.addEventListener('click', ())
+
+</script>
+</html>
