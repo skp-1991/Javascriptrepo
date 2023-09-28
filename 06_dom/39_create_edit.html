@@ -29,9 +29,9 @@
 </body>
 <script>
     const submit = document.querySelector('#submitValue')
+    const list = document.querySelector('.list-i')
     submit.addEventListener("click", ()=>{
     const addValue = document.getElementById('addvalue').value;
-        const list = document.querySelector('.list-i')
         let li = document.createElement('li')
         let liText = document.createTextNode(addValue)
         li.appendChild(liText)
@@ -41,7 +41,11 @@
     })
     const deleted = document.querySelector('#deleteValue')
 
-    deleted.addEventListener('click', ())
+    deleted.addEventListener('click', ()=> {
+        const listLast = document.querySelector('.list-i > li:last-child')
+        list.removeChild(listLast)
+
+    })
 
 </script>
 </html>
