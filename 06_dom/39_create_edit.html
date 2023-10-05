@@ -14,8 +14,9 @@
 </head>
 <body>
     <div class="content-list">
+        
         <ul class="list-i">
-            <li>Javascript</li>
+            <li>Javascript <button class="edit" type="button"> Edit</button></li>
         </ul>
     </div>
     <div class="form-box">
@@ -35,7 +36,6 @@
         let li = document.createElement('li')
         let liText = document.createTextNode(addValue)
         li.appendChild(liText)
-        console.log(li)
         list.appendChild(li)
 
     })
@@ -46,6 +46,14 @@
         list.removeChild(listLast)
 
     })
+
+
+    // Edit
+    let i
+    const listLast1 = document.querySelector('.list-i')
+    const childList = listLast1.child
+    console.log(childList)
+
 
 </script>
 </html>
