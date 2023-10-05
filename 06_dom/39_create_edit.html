@@ -14,15 +14,15 @@
 </head>
 <body>
     <div class="content-list">
-        
+       
         <ul class="list-i">
-            <li>Javascript <button class="edit" type="button"> Edit</button></li>
+            <li>Javascript</li>
         </ul>
     </div>
     <div class="form-box">
-        <input type="text" name="text" id="addvalue" value="dfvfx">
+        <input type="text" name="text" id="addvalue" value="React">
         <input type="submit" value="Add Value" id="submitValue">
-        
+        <button id="edit" type="button"> Edit</button>
         <input type="submit" value="Delete" id="deleteValue">
     </div>
     
@@ -37,22 +37,42 @@
         let liText = document.createTextNode(addValue)
         li.appendChild(liText)
         list.appendChild(li)
-
     })
     const deleted = document.querySelector('#deleteValue')
 
     deleted.addEventListener('click', ()=> {
         const listLast = document.querySelector('.list-i > li:last-child')
-        list.removeChild(listLast)
+        // list.removeChild(listLast)
+        listLast.remove()
 
     })
 
 
     // Edit
-    let i
-    const listLast1 = document.querySelector('.list-i')
-    const childList = listLast1.child
-    console.log(childList)
+
+    // Example 1 - By creating the element
+    const edit = document.querySelector('#edit')
+    // edit.addEventListener('click', ()=> {
+    //     const listLast1 = document.querySelector('.list-i > li:nth-child(3)')
+    //     let newli = document.createElement('li')
+    //     newli.textContent = "Hello"
+    //     listLast1.replaceWith(newli)
+
+    // })
+
+    // Example 2 - By outerHTML in this we will also give the html tag 
+    // edit.addEventListener('click', ()=> {
+    //     const listLast1 = document.querySelector('.list-i > li:nth-child(5)')
+    //     listLast1.outerHTML = "<li>Best Way</li>"
+
+    // })
+
+    // Example 2 - By innerHTML for changing the text 
+    edit.addEventListener('click', ()=> {
+        const listLast1 = document.querySelector('.list-i > li:nth-child(5)')
+        listLast1.innerHTML = "Wrong Way"
+
+    })
 
 
 </script>
