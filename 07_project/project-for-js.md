@@ -31,5 +31,42 @@ btnAll.forEach((btnAll)=>{
 
 ## Project 2
 ```javascript
-console.log("project 2")
+const form = document.querySelector('form')
+
+form.addEventListener('submit', (e)=>{
+  e.preventDefault();  // this use for stop the action of the form
+  
+  const height = parseInt(document.querySelector('#height').value)
+  const weight = parseInt(document.querySelector('#weight').value)
+  const results = document.querySelector('#results')
+
+
+  // isNoN() is new feature of the javascript for not a number
+
+  if(height === '' || height < 0 || isNaN(height)){
+    results.innerHTML = `Please provide valid height ${height}`
+  }else if(weight === '' || weight < 0 || isNaN(weight)){
+    results.innerHTML = `Please provide valid weight ${weight}`
+  }else{
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2)
+    if(bmi < 18.6 ){
+      results.innerHTML = `<span>BMI :: ${bmi}</span> -- <span>Under Weight</span>`
+    }else if ( bmi > 18.6 && bmi < 24.9){
+      results.innerHTML = `<span>BMI :: ${bmi}</span> -- <span>Normal Range</span>`
+    }else{
+      results.innerHTML = `<span>BMI :: ${bmi}</span> -- <span>Over Weight</span>`
+    }
+    
+  }
+})
+```
+
+## Project 2
+```javascript
+const clock = document.querySelector('#clock')
+
+setInterval(function(){
+  let date = new Date()
+  clock.innerHTML = date.toLocaleTimeString()
+},1000)
 ```
