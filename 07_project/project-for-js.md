@@ -70,3 +70,121 @@ setInterval(function(){
   clock.innerHTML = date.toLocaleTimeString()
 },1000)
 ```
+### Project 4
+
+```javascript
+let randomNumber = parseInt(Math.random() * 100 + 1)
+
+const guessField = document.querySelector('#guessField')
+const submit = document.querySelector('#subt')
+const message = document.querySelector('.resultParas')
+const guesses = document.querySelector('.guesses')
+const lastResult = document.querySelector('.lastResult')
+const lowOrHi = document.querySelector('.lowOrHi')
+
+
+const p = document.createElement('p')
+
+// this blank array for the showing the aready guess value
+let prevGuess = []
+
+
+// this will count the attampt of guess we will incress the value as per click  and numGuess++
+let numGuess = 1
+
+// This will use as the permission to play the game. if game over or win then this will call false so user can not play the game.
+let playGame = true
+
+
+
+
+if(playGame){
+  submit.addEventListener('click', (e)=>{
+    e.preventDefault();
+    let guessValue = parseInt(guessField.value)
+    validation(guessValue)
+  })
+}
+
+// function
+
+// This will validate the input value for value is in number of other 
+function validation(guess){
+  
+  if(isNaN(guess)){
+    lowOrHi.innerHTML= `Please Enter a valid number`
+  }else if(guess < 1){
+    lowOrHi.innerHTML= `Please Enter a value greater than 0`
+  }else if(guess > 100){
+    lowOrHi.innerHTML= `Please Enter a value less then 100`
+  }else{
+    prevGuess.push(guess)
+    if(numGuess === 11){
+      displayGuess(guess)
+      displayMessage(`Game Over and random number was ${randomNumber}`)
+      endGame()
+    }else{
+      displayGuess(guess)
+      checkGuess(guess)
+    }
+  }
+
+}
+
+// This will use for check the value that value match with randomnumber or not
+function checkGuess(guess){
+  if(guess === randomNumber){
+    displayMessage('You have guessed right')
+    endGame()
+  }
+  else if(guess < randomNumber){
+    displayMessage('Guess value is too low')
+  }else if(guess > randomNumber){
+    displayMessage('Guess value is too heigh')
+  }
+}
+
+// This will also display the guess and intrect with dom
+function displayGuess(guess){
+  guessField.value = ''
+  guesses.innerHTML += `${guess}, `
+  numGuess++
+  lastResult.innerHTML = `${11 - numGuess}`
+}
+
+
+// this will show the message and this will intrect with the dom thats mean append the child in div
+function displayMessage(messages){
+   lowOrHi.innerHTML = `${messages}`
+}
+
+
+function endGame(){
+  guessField.value = ''
+  guessField.setAttribute('disabled','disabled')
+  submit.style.display = 'none'
+  p.innerHTML = '<button>Start Game</button>'
+  p.classList.add('button')
+  playGame = false
+  message.appendChild(p)
+  startGame()
+}
+
+function startGame(){
+  let start = document.querySelector('.button')
+  start.addEventListener('click', (e)=>{
+    guessField.value = ''
+    guessField.removeAttribute('disabled')
+    submit.style.display = 'inline-block'
+    prevGuess = []
+    numGuess = 1
+    guesses.innerHTML = ''
+    lastResult.innerHTML = `${11 - numGuess}`
+    message.removeChild(p)
+    lowOrHi.innerHTML = ''
+    randomNumber = parseInt(Math.random() * 100 + 1)
+    playGame = true
+  })
+}
+
+```
