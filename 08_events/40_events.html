@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function (){
+    //     alert('hi')
+    // }
+
+    // attachEvent
+    // jQuery
+
+    // ============================== reading things
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    // in the addEventListener We use three parameter (event,function and ture or false)
+    // false is the defult value of third parameter
+    
+    // Event propogation
+       // If we use the false in third parameter then this will call event bubbling, this will go with click to parent
+       // If we use the ture in third parameter then this will call event capturing, this will go with parent to child
+
+    // document.getElementById('owl').addEventListener('click', (e)=>{
+    //     console.log('Life')
+    // },false)
+
+    // document.getElementById('images').addEventListener('click', (e)=>{
+    //     console.log('God')
+    // },false)
+
+
+    //  e.stopPropagation() -- this use for stop the bubbling and capturing
+
+    document.getElementById('owl').addEventListener('click', (e)=>{
+        console.log('Life')
+        e.stopPropagation()
+    },false)
+
+    document.getElementById('images').addEventListener('click', (e)=>{
+        console.log('God')
+        e.stopPropagation()
+    },false)
+
+    // e.preventDefault() == this use for stop the click on any link or other things
+    document.getElementById('google').addEventListener('click', (e)=>{
+        e.preventDefault()
+        console.log('google')
+        e.stopPropagation()
+    },false)
+
+
+</script>
+</html>
