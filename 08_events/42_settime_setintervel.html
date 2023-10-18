@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Coding Classes</h1>
+    <button id="sta">start</button><button id="sto">stop</button>
+</body>
+<script>
+    let start = document.querySelector('#sta')
+    let stop = document.querySelector('#sto')
+    let h1 = document.querySelector('h1')
+    let i = 0
+    // setInterval(function(){
+    //     console.log('hello')
+    // },2000)
+
+    // setTimeout(function(){
+    //     console.log('Bye')
+    // },3000)
+
+    // This is a handler variable
+    const setTime = function(){
+        console.log(`life of pie ${i}`)
+        i++;
+    }
+
+    // let changeMe = setTimeout(setTime,3000)
+    // let changeMe = setInterval(setTime,3000)
+
+    
+
+    start.addEventListener('click', ()=>{
+        setInterval(setTime,3000)
+        console.log('start')
+    })
+
+
+    // clearTimeout
+    stop.addEventListener('click', ()=>{
+        clearTimeout(stopTime)
+        console.log('stop')
+    })
+
+
+    // this have the three parameter function, time, string
+
+    const timeout = function(str){
+        console.log(str, Date())
+    }
+    let stopTime = setInterval(timeout, 1000 , 'Hello World')
+    
+
+    
+</script>
+</html>
