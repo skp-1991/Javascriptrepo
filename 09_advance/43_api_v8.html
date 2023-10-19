@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table td, table th {
+    border: 1px solid #000;
+    padding: 0.5rem 0.75rem;
+    vertical-align: middle;
+}
+    </style>
+</head>
+<body style>
+    <!-- api requiest links type 
+    https://api.github.com/users/skp-1991
+    https://randomuser.me/
+    -->
+
+    <table style="
+    border: 1px solid #000;
+    border-collapse: collapse;
+    width: 100%;
+">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>State</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>0</code></td>
+            <td><code>UNSENT</code></td>
+            <td>Client has been created. <code>open()</code> not called yet.</td>
+          </tr>
+          <tr>
+            <td><code>1</code></td>
+            <td><code>OPENED</code></td>
+            <td><code>open()</code> has been called.</td>
+          </tr>
+          <tr>
+            <td><code>2</code></td>
+            <td><code>HEADERS_RECEIVED</code></td>
+            <td><code>send()</code> has been called, and headers and status are available.</td>
+          </tr>
+          <tr>
+            <td><code>3</code></td>
+            <td><code>LOADING</code></td>
+            <td>Downloading; <code>responseText</code> holds partial data.</td>
+          </tr>
+          <tr>
+            <td><code>4</code></td>
+            <td><code>DONE</code></td>
+            <td>The operation is complete.</td>
+          </tr>
+        </tbody>
+      </table>
+
+</body>
+<script>
+const requestURL = 'https://api.github.com/users/skp-1991';
+const xhr = new XMLHttpRequest();
+
+// in OPENED first will be the method which have GET, PUT and POST
+// open(method, url, async, user, password)
+xhr.open('GET', requestURL);
+
+// this will only track the state only one time , this will be the 1 if geting the data
+console.log(xhr.readyState);
+
+
+// This use for track the state change ervery time
+xhr.onreadystatechange = () =>{
+    console.log(xhr.readyState);
+    if(xhr.readyState === 4){
+        console.log(this.responseText);
+    }
+}
+
+
+
+xhr.send();
+</script>
+</html>
