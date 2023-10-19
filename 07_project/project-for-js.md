@@ -188,3 +188,64 @@ function startGame(){
 }
 
 ```
+
+### Project 5
+
+```javascript
+
+// genrate Random color
+
+const start = document.querySelector('#start')
+const stop = document.querySelector('#stop')
+
+
+
+const colorRandom = function(){
+  let hex = '0123456789ABCDEF'
+  let color = '#'
+  for(let i = 0; i < 6; i++){
+    color += hex[Math.floor(Math.random() * 16)]
+  }
+  return color
+}
+
+let timeLoop;
+
+// start.addEventListener('click', ()=>{
+//   let colorLoop = function(){
+//     document.body.style.backgroundColor = colorRandom()
+//   }
+//   timeLoop = setInterval(colorLoop, 1000)
+// })
+
+// stop.addEventListener('click', ()=>{
+//   clearInterval(timeLoop)
+//   console.log('stop')
+// })
+
+let startColourChange = function(){
+  let colorLoop = function(){
+    document.body.style.backgroundColor = colorRandom()
+  }
+  if(!timeLoop){
+  timeLoop = setInterval(colorLoop, 2000)
+  }
+
+}
+start.addEventListener('click', startColourChange)
+
+
+let stopColourChange = function(){
+  clearInterval(timeLoop)
+  timeLoop = null
+}
+stop.addEventListener('click', stopColourChange)
+
+```
+
+### Project 6
+
+```javascript
+
+
+```
