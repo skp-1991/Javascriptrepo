@@ -246,6 +246,28 @@ stop.addEventListener('click', stopColourChange)
 ### Project 6
 
 ```javascript
+const insert = document.getElementById('insert')
 
+let keyboardClick = function(e){
+  insert.innerHTML = `
+  <div class="color">
+    <table>
+      <tr>
+        <th>Key</th>
+        <th>Key Code</th>
+        <th>Code</th>
+      </tr>
+      <tr>
+        <td>${e.key === ' ' ? 'space' : e.key}</td>
+        <td>${e.keyCode}</td>
+        <td>${e.code}</td>
+      </tr>
+    </table>
+  </div>
+  `
+}
+
+
+window.addEventListener('keydown', keyboardClick)
 
 ```
