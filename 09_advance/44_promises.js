@@ -44,7 +44,7 @@
 
 const fourthPromise = new Promise(function(resolve, reject){
     setTimeout(function(){
-        let error = true
+        let error = false
         if (!error) {
             resolve({username : 'Anil', email : 'anil@anil.com'})
         }else{
@@ -53,6 +53,31 @@ const fourthPromise = new Promise(function(resolve, reject){
     }, 1000)
 })
 
-fourthPromise.then(function(user){
+fourthPromise.then(function(user){ // then use for get the data
     console.log(user);
+    return user.username
+}).then((username)=>{
+    console.log(username);
+}).catch((err)=>{   // catch use for print the error 
+    console.log(err);
+}).finally(()=>{
+    console.log('promise resolved')
+})
+
+
+// Promise five
+
+const promiseFive = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let err = true
+        if(!err){
+        resolve({username : 'Sunil', pass : '2323'})
+        }else{
+            reject('Error gone wrong')
+        }
+    },1000)
+})
+
+promiseFive.then(()=>{
+    
 })
