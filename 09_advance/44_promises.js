@@ -122,7 +122,6 @@ allUserData()
 
 // Promise Seven
 
-
 fetch('https://jsonplaceholder.typicode.com/users')
 .then(function(resolve){
     return resolve.json()
