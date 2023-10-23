@@ -101,22 +101,31 @@
 
 // Promise Six
 
-// we will use await with the fatch becasue this is taking time to fatch the data
-async function allUserData(){
-    try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/users')  
-            // this data will come in string formate and we will convert this in JSON formate
-            const data = await response.json()
-            for (let index = 0; index < data.length; index++) {
-                console.log(`${data[index].address.geo.lat} - ${data[index].address.geo.lng} `)
-            }
-        } 
-    catch (error) {
-        console.log('E:', error)
-    }
+// // we will use await with the fatch becasue this is taking time to fatch the data
+// async function allUserData(){
+//     try {
+//             const response = await fetch('https://jsonplaceholder.typicode.com/users')  
+//             // this data will come in string formate and we will convert this in JSON formate
+//             const data = await response.json()
+//             for (let index = 0; index < data.length; index++) {
+//                 console.log(`${data[index].address.geo.lat} - ${data[index].address.geo.lng} `)
+//             }
+//         } 
+//     catch (error) {
+//         console.log('E:', error)
+//     }
     
-}
+// }
 
-allUserData()
+// allUserData()
 
 
+// Promise Seven
+
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then(function(resolve){
+    return resolve.json()
+}).then(function(data){
+    console.log(data)
+})
