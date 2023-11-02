@@ -11,7 +11,7 @@ const prnt = new user("ram","ram")
 console.log(prnt.printUser());
 
 
-// in noraml javascript we use prototype but in class we use extends to create a new class
+// in noraml javascript we use prototype but in class we use extends to connect class
 class teacherData extends user {
     constructor(username,fname,password,email,phone){
         super(username,fname)
