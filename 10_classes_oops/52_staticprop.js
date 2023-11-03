@@ -26,7 +26,6 @@ class department extends user {
         super(username)
         this.department = department
     }
-
 }
 
 const phoneBox = new department('hello','Web')
