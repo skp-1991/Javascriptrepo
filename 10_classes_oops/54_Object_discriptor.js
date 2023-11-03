@@ -70,3 +70,37 @@ Object.defineProperties(ObjTwo, {
 })
 
 console.log(ObjTwo);
+
+
+
+/// If we are using function in side the Object then we use if condition when we create loop
+
+let objThree = {}
+
+Object.defineProperties(objThree, {
+    empName : {
+        value : 'Rahul',
+        writable : true,
+        enumerable : true
+    },
+    empID : {
+        value : 101,
+        writable : true,
+        enumerable : true
+    },
+    empList : {
+        value : function(){
+            console.log('hello world')
+        },
+        writable : true,
+        enumerable : true
+    }
+})
+
+console.log(objThree);
+
+for (const [key, value] of Object.entries(objThree)) {
+    if (typeof value !== 'function'){
+        console.log(`${key} --- ${value}`)
+    }
+}
