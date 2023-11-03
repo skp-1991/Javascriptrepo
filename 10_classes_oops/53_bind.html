@@ -6,6 +6,26 @@
     <title>React</title>
 </head>
 <body>
+    <button id="but">Submit</button>
     
 </body>
+<script>
+
+    // bind keyword not used in latest project. this only use in old project
+    class React {
+        constructor(){
+            this.library = 'Library'
+            this.server = 'https://localhost:3000'
+            // if we have lost this refrence, if we lost full of the refrence or we got the click element refrence then we will use the bind keywod like (bind(this)). bind keyword us for attached with the method.
+            document.querySelector('#but').addEventListener('click', this.handalClick.bind(this))
+        }
+        handalClick(){
+            console.log('button click');
+            console.log(this);
+            console.log(this.server);
+            console.log(this.library);
+        }
+    }
+    const btnBox = new React()
+</script>
 </html>
