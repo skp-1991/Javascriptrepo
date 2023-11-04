@@ -1,4 +1,5 @@
 // new - this is a constroctor function and this allow to make multiple insistence ('objectone(value1,value2 etc)') by single object literal 
+// new keyword is a constractor function
 
 // example of new 
 
