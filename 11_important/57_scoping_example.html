@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;">
+    <button id="green">Green</button>
+    <button id="blue">Blue</button>
+</body>
+<script>
+    // document.getElementById('green').addEventListener('click', function(){
+    //     document.body.style.background = 'green';
+    // })
+    // document.getElementById('blue').addEventListener('click', function(){
+    //     document.body.style.background = 'blue';
+    // })
+
+
+        function clickHand(bgColor){
+            // we have retrun the function that's mean now this will return function with his lexical scope. Means with outer function
+            return function (){
+                document.body.style.backgroundColor = `${bgColor}`
+            }
+        }
+
+        document.getElementById('green').onclick = clickHand('green')
+        document.getElementById('blue').onclick = clickHand('blue')
+</script>
+</html>

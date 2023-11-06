@@ -18,6 +18,16 @@ outer()
 
 // clouser
 
+
+// we are return innerTwo and we have remove the function exicution that why now memory refrence will work. Now if innerTwo function will exicute by the outerTwo then This will call with his outer function, if avaliable.
+
+// clouser work when we reture a function thats mean full of the scope will returen(a inner function return then outer function will also retrun(lexical scope))
 function outerTwo(){
     let username = 'life'
+    function innerTwo(){
+        console.log(`This is ${username}`);
+    }
+    return innerTwo
 }
+const all = outerTwo()
+all()
